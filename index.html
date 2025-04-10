@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+    <style>
+        .qr-code {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center mt-5">QR Code Generator</h1>
+    <form id="qrForm" class="mt-4">
+        <div class="form-group">
+            <label for="userDetails">Enter User Details</label>
+            <textarea class="form-control" id="userDetails" rows="4" placeholder="Enter details here..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Generate QR Code</button>
+    </form>
+
+    <div class="qr-code" id="qrCode"></div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#qrForm').on('submit', function(e) {
+            e.preventDefault(); // Prevent form submission
+
+            // Get the user details
+            var userDetails = $('#userDetails').val();
+
+            // Clear previous QR codes
+            $('#qrCode').empty();
+
+            // Generate new QR code
+            $('#qrCode').qrcode(userDetails);
+        });
+    });
+</script>
+
+</body>
+</html>
