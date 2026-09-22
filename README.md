@@ -4,7 +4,7 @@
 
 ![image_alt](https://github.com/Wilfred1097/qr-generator/blob/main/sample-ui.PNG?raw=true)
 
-🌐 **Live Demo:** [https://wilfred1097.github.io/qr-generator/](https://wilfred1097.github.io/qr-generator/)
+🌐 **Live Demo:** [https://wilfred1097.github.io/qr-generator/](https://wilfred1097.github.io/Quantum_QR/)
 
 ---
 
